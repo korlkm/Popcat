@@ -12,6 +12,7 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         var imageView:ImageView = findViewById(R.id.imageView)
+        imageView.setImageResource(R.drawable.popcat1)
 
         imageView.setOnTouchListener(object : View.OnTouchListener{
             @SuppressLint("ClickableViewAccessibility")
