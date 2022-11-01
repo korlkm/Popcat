@@ -6,11 +6,17 @@ import android.os.Bundle
 import android.view.MotionEvent
 import android.view.View
 import android.widget.ImageView
+import android.widget.TextView
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
+
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+
+        val count:TextView = findViewById<TextView>(R.id.count)
+        var number = 0;
+
         var imageView:ImageView = findViewById(R.id.imageView)
         imageView.setImageResource(R.drawable.popcat1)
 
@@ -20,6 +26,9 @@ class MainActivity : AppCompatActivity() {
                 if (p1 != null) {
                     if(p1.action == MotionEvent.ACTION_DOWN) {
                         imageView.setImageResource(R.drawable.popcat2)
+                        number++
+                        count.setText(number.toString())
+
                     } else {
                         imageView.setImageResource(R.drawable.popcat1)
                     }
