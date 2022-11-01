@@ -1,6 +1,7 @@
 package com.example.popcat
 
 import android.annotation.SuppressLint
+import android.media.SoundPool
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.MotionEvent
@@ -17,6 +18,10 @@ class MainActivity : AppCompatActivity() {
         val count:TextView = findViewById<TextView>(R.id.count)
         var number = 0;
 
+        val soundPool = SoundPool.Builder().build()
+        var soundId : Int = 0
+        soundId = soundPool.load(this, R.raw.sound3, 1)
+
         var imageView:ImageView = findViewById(R.id.imageView)
         imageView.setImageResource(R.drawable.popcat1)
 
@@ -28,6 +33,7 @@ class MainActivity : AppCompatActivity() {
                         imageView.setImageResource(R.drawable.popcat2)
                         number++
                         count.setText(number.toString())
+                        soundPool.play(soundId, 1.0f, 1.0f, 0, 0, 1.0f)
 
                     } else {
                         imageView.setImageResource(R.drawable.popcat1)

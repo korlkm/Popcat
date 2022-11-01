@@ -9,15 +9,16 @@
     >
 
 
-
     <ImageView
         android:id="@+id/imageView"
-        android:layout_width="365dp"
-        android:layout_height="573dp"
+        android:layout_width="381dp"
+        android:layout_height="618dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.466"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.858"
         tools:srcCompat="@drawable/popcat1" />
 
     <TextView
